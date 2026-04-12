@@ -1,3 +1,5 @@
+package challenges;
+
 public class challengeOperators {
     public static void main(String[] args) {
         double num = 20.00;
