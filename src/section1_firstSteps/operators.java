@@ -1,4 +1,4 @@
-package section1;
+package section1_firstSteps;
 
 public class operators {
     public static void main(String[] args) {
