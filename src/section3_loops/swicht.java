@@ -16,6 +16,10 @@ public class swicht {
         printNumberInWord(2);
         printNumberInWord(5);
 
+        String month = "APRIL";
+        System.out.println(month + " is in the " + getQuarter(month) + " quarter");
+
+        System.out.println(getQuarter("NOVEMBER"));
         }
 
     public static void printNumberInWord(int number) {
@@ -30,7 +34,23 @@ public class swicht {
             case 6 -> System.out.println("six");
             default -> System.out.println("other");
         }
+    }
 
+    //yield aparece cuando en vez de devolver directamente con -> "1st", necesitas abrir un bloque { } y hacer más cosas dentro.
+    // Si usas yield con varias lineas si necesitas yield
+
+    public static String getQuarter(String month) {
+
+        return switch (month) {
+            case "JANUARY", "FEBRUARY", "MARCH" -> "1st";
+            case "APRIL", "MAY", "JUNE" -> "2nd";
+            case "JULY", "AUGUST", "SEPTEMBER" -> "3rd";
+            case "OCTOBER", "NOVEMBER", "DECEMBER" -> "4th";
+            default -> {
+                yield month + " is bad";
+            }
+        };
 
     }
 }
+
